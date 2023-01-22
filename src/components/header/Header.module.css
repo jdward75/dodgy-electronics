@@ -1,0 +1,28 @@
+.header {
+  background-color: lightgrey;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.account {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: larger;
+}
+
+.account span {
+  font-size: lager;
+  font-weight: bold;
+}
+
+.account button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
