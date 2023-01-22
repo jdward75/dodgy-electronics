@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_1.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 2,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_2.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 3,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_3.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 4,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_4.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 5,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_5.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 6,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_1.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 7,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_1.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 8,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_1.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 9,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_1.webp",
+    "price": 895.95,
+    "category": "tv"
+  },
+  {
+    "id": 10,
+    "title": "Samsaung Crystal UHD ",
+    "image": "tv_1.webp",
+    "price": 895.95,
+    "category": "tv"
+  }
+]

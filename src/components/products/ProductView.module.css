@@ -1,0 +1,9 @@
+.product-view {
+  width: 30%;
+  padding: 10px;
+}
+
+.product-view img {
+  width: 100%;
+  border: 1px solid red;
+}
