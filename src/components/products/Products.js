@@ -1,15 +1,19 @@
 import styles from "./Products.module.css";
+import ProductsFilter from "./ProductsFilter";
 import ProductView from "./ProductView";
 
 const productList = require("../../assets/productList.json");
 
 const Products = () => {
   return (
-    <ul className={styles.products}>
-      {productList.map((product) => {
-        return <ProductView key={product.id} product={product} />;
-      })}
-    </ul>
+    <>
+      <ProductsFilter />
+      <div className={styles.products}>
+        {productList.map((product) => {
+          return <ProductView key={product.id} product={product} />;
+        })}
+      </div>
+    </>
   );
 };
 

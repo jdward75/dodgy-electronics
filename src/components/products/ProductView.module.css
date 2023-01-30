@@ -7,3 +7,15 @@
   width: 100%;
   border: 1px solid red;
 }
+
+@media screen and (max-width: 1100px) {
+  .product-view {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .product-view {
+    width: 95%;
+  }
+}
