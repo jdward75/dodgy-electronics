@@ -1,12 +1,12 @@
-.select {
+.input {
   padding: 2px;
 }
 
-.select label {
+.input label {
   margin-right: 10px;
   font-weight: bold;
 }
 
-.select select {
-  width: 150px;
+.input input {
+  width: 100px;
 }

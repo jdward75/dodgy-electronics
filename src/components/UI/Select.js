@@ -1,8 +1,10 @@
+import styles from "./Select.module.css";
+
 const Select = (props) => {
   return (
-    <div>
+    <div className={styles.select}>
       <label htmlFor={props.id}>{props.label}</label>
-      <select name={props.name} id={props.id}>
+      <select name={props.name} id={props.id} onChange={props.onChange}>
         {props.options.map((option) => {
           return (
             <option key={option.value} value={option.value}>
