@@ -1,6 +1,7 @@
 import styles from "./ProductsFilter.module.css";
 import Input from "../UI/Input";
 import Select from "../UI/Select";
+import { useRef } from "react";
 
 const ProductsFilter = (props) => {
   const categoryOptions = [
@@ -39,12 +40,17 @@ const ProductsFilter = (props) => {
     ).values(),
   ];
 
+  const categoryRef = useRef();
+  const brandRef = useRef();
+  const minPriceRef = useRef();
+  const maxPriceRef = useRef();
+
   const applyFilterProductList = () => {
     const filter = {
-      category: "tv",
-      brand: "Samsung",
-      minPrice: 0,
-      maxPrice: 500,
+      category: categoryRef.current.value,
+      brand: brandRef.current.value,
+      minPrice: Number(minPriceRef.current.value),
+      maxPrice: Number(maxPriceRef.current.value),
     };
     props.onFilterProductList(filter);
   };
@@ -56,11 +62,33 @@ const ProductsFilter = (props) => {
         label="Category"
         name="category"
         options={categoryOptions}
+        ref={categoryRef}
         onChange={applyFilterProductList}
       />
-      <Select id="brand" label="Brand" name="brand" options={brandOptions} />
-      <Input id="min-price" label="Min Price:" name="min-price" type="number" />
-      <Input id="max-price" label="Max Price:" name="max-price" type="number" />
+      <Select
+        id="brand"
+        label="Brand"
+        name="brand"
+        options={brandOptions}
+        ref={brandRef}
+        onChange={applyFilterProductList}
+      />
+      <Input
+        id="min-price"
+        label="Min Price:"
+        name="min-price"
+        type="number"
+        ref={minPriceRef}
+        onChange={applyFilterProductList}
+      />
+      <Input
+        id="max-price"
+        label="Max Price:"
+        name="max-price"
+        type="number"
+        ref={maxPriceRef}
+        onChange={applyFilterProductList}
+      />
     </div>
   );
 };

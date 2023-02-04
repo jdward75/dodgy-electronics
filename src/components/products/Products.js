@@ -11,16 +11,16 @@ const Products = () => {
   const filterProductListHandler = (filters) => {
     const filteredList = productList.filter((product) => {
       let result = true;
-      if (filters.category !== "All" || product.category !== filters.category) {
+      if (filters.category !== "All" && product.category !== filters.category) {
         result = false;
       }
-      if (filters.brand !== "All" || product.brand !== filters.brand) {
+      if (filters.brand !== "All" && product.brand !== filters.brand) {
         result = false;
       }
-      if (filters.minPrice !== 0 || product.price < filters.minPrice) {
+      if (filters.minPrice !== 0 && product.price < filters.minPrice) {
         result = false;
       }
-      if (filters.category !== 0 || product.price >= filters.maxPrice) {
+      if (filters.maxPrice !== 0 && product.price > filters.maxPrice) {
         result = false;
       }
       return result;
