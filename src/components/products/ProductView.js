@@ -1,8 +1,15 @@
 import styles from "./ProductView.module.css";
 
 const ProductView = (props) => {
+  const displayProductDetailsHandler = () => {
+    props.displayProductDetails(props.product);
+  };
+
   return (
-    <div className={styles["product-view"]}>
+    <div
+      className={styles["product-view"]}
+      onClick={displayProductDetailsHandler}
+    >
       <h3>{props.product.title}</h3>
       <img
         src={require(`../../assets/${props.product.image}`)}
