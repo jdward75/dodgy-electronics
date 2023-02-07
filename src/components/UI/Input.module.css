@@ -3,10 +3,12 @@
 }
 
 .input label {
+  display: inline-block;
+  width: 80px;
   margin-right: 10px;
   font-weight: bold;
 }
 
 .input input {
-  width: 100px;
+  width: 120px;
 }

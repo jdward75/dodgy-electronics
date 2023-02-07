@@ -14,9 +14,13 @@
   background-color: white;
   min-height: 150px;
   flex-grow: 1;
-  max-width: 600px;
+  max-width: 800px;
   border-radius: 15px;
   padding: 25px;
   display: flex;
   flex-direction: column;
+}
+
+.product-details-content img {
+  width: 100%;
 }
