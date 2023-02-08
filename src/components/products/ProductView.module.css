@@ -1,6 +1,7 @@
 .product-view {
   width: 30%;
   padding: 10px;
+  cursor: pointer;
 }
 
 .product-view img {

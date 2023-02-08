@@ -1,4 +1,4 @@
-.product-details {
+.main-container {
   position: fixed;
   z-index: 10;
   height: 100vh;
@@ -10,7 +10,7 @@
   padding: 30px;
 }
 
-.product-details-content {
+.content {
   background-color: white;
   min-height: 150px;
   flex-grow: 1;
@@ -21,6 +21,31 @@
   flex-direction: column;
 }
 
-.product-details-content img {
+.close-button {
+  align-self: flex-end;
+  border: none;
+  background-color: white;
+  font-size: x-large;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.image {
   width: 100%;
+  margin-bottom: 15px;
+}
+
+.footer {
+  display: flex;
+  gap: 10px;
+}
+
+.update-cart {
+  align-self: flex-end;
 }
