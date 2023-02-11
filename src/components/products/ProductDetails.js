@@ -1,6 +1,29 @@
 import styles from "./ProductDetails.module.css";
 import Input from "../UI/Input";
+import { CartContext } from "../../store/CartContext";
+import { useContext, useRef } from "react";
+
 const ProductDetails = (props) => {
+  const cartCtx = useContext(CartContext);
+  const quantityRef = useRef();
+
+  let prevQuantity = String(cartCtx.cart.items[props.product.id]?.quantity);
+  if (prevQuantity === undefined) {
+    prevQuantity = "";
+  }
+
+  const updateCartHandler = () => {
+    const quantiy = Number(quantityRef.current.value);
+    const data = {
+      id: props.product.id,
+      title: props.product.title,
+      brand: props.product.brand,
+      quantity: quantiy,
+      price: props.product.price,
+    };
+    cartCtx.updateCart(data);
+  };
+
   return (
     <div className={styles["main-container"]}>
       <div className={styles.content}>
@@ -18,7 +41,18 @@ const ProductDetails = (props) => {
         />
         <div className={styles.footer}>
           <h3>{`$${props.product.price}`}</h3>
-          <Input type="number" id="qty" name="qty" label="Update cart qty:" />
+          <div className={styles["update-cart"]}>
+            <Input
+              styles={{ width: "50px" }}
+              type="number"
+              id="qty"
+              name="qty"
+              label="Update Cart Qty:"
+              ref={quantityRef}
+              onChange={updateCartHandler}
+              defaultValue={prevQuantity}
+            />
+          </div>
         </div>
       </div>
     </div>

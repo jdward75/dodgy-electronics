@@ -1,12 +1,15 @@
 import "./App.css";
 import Header from "./components/header/Header";
 import Products from "./components/products/Products";
+import CartProvider from "./store/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Products />
+      <CartProvider>
+        <Header />
+        <Products />
+      </CartProvider>
     </div>
   );
 }

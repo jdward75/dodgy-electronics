@@ -1,14 +1,14 @@
 .input {
+  display: flex;
   padding: 2px;
 }
 
 .input label {
-  display: inline-block;
-  width: 80px;
   margin-right: 10px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .input input {
-  width: 120px;
+  flex: 1 1 auto;
 }

@@ -11,6 +11,8 @@ const Input = forwardRef((props, ref) => {
         id={props.id}
         name={props.name}
         onChange={props.onChange}
+        style={props.styles}
+        defaultValue={props.defaultValue}
       ></input>
     </div>
   );

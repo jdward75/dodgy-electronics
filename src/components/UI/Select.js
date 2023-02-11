@@ -10,6 +10,7 @@ const Select = forwardRef((props, ref) => {
         name={props.name}
         id={props.id}
         onChange={props.onChange}
+        style={props.styles}
       >
         {props.options.map((option) => {
           return (

@@ -64,6 +64,7 @@ const ProductsFilter = (props) => {
         options={categoryOptions}
         ref={categoryRef}
         onChange={applyFilterProductList}
+        styles={{ width: "125px" }}
       />
       <Select
         id="brand"
@@ -72,6 +73,7 @@ const ProductsFilter = (props) => {
         options={brandOptions}
         ref={brandRef}
         onChange={applyFilterProductList}
+        styles={{ width: "125px" }}
       />
       <Input
         id="min-price"
@@ -80,14 +82,17 @@ const ProductsFilter = (props) => {
         type="number"
         ref={minPriceRef}
         onChange={applyFilterProductList}
+        styles={{ width: "100px" }}
       />
       <Input
         id="max-price"
         label="Max Price:"
         name="max-price"
         type="number"
+        width="100px"
         ref={maxPriceRef}
         onChange={applyFilterProductList}
+        styles={{ width: "100px" }}
       />
     </div>
   );
