@@ -1,4 +1,5 @@
 import styles from "./Cart.module.css";
+import CartItem from "./CartItem";
 
 const Cart = (props) => {
   return (
@@ -7,6 +8,22 @@ const Cart = (props) => {
         <button className={styles["close-button"]} onClick={props.hideCart}>
           X
         </button>
+        <h3 className={styles.header}>Shopping Cart Items</h3>
+        {Object.entries(props.cartCtx.cart.items).map(([key, value]) => {
+          return (
+            <CartItem
+              key={key}
+              item={value}
+              updateCart={props.cartCtx.updateCart}
+            />
+          );
+        })}
+        <div className={styles.footer}>
+          <div className={styles["footer-header"]}>Cart total amount:</div>
+          <div className={styles["footer-amount"]}>
+            {props.cartCtx.cart.total_value}
+          </div>
+        </div>
       </div>
     </div>
   );

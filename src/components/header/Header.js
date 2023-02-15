@@ -23,12 +23,16 @@ const Header = () => {
         <span>Jonathan Ward</span>
         <button>Login</button>
         <button onClick={showCartHandler}>
-          Cart: {`$${cartCtx.cart.total_value}`}
+          Cart:{" "}
+          {cartCtx.cart.total_value.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
         </button>
       </div>
       {showCart &&
         reactDom.createPortal(
-          <Cart hideCart={hideCartHandler} />,
+          <Cart hideCart={hideCartHandler} cartCtx={cartCtx} />,
           document.getElementById("root-overlay")
         )}
     </div>

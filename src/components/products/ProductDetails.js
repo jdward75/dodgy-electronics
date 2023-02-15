@@ -40,7 +40,12 @@ const ProductDetails = (props) => {
           alt={props.product.title}
         />
         <div className={styles.footer}>
-          <h3>{`$${props.product.price}`}</h3>
+          <h3>
+            {props.product.price.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
+          </h3>
           <div className={styles["update-cart"]}>
             <Input
               styles={{ width: "50px" }}

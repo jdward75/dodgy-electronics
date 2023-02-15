@@ -15,7 +15,12 @@ const ProductView = (props) => {
         src={require(`../../assets/${props.product.image}`)}
         alt={props.product.title}
       />
-      <h3 className={styles.price}>{`$${props.product.price}`}</h3>
+      <h3 className={styles.price}>
+        {props.product.price.toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        })}
+      </h3>
     </div>
   );
 };
