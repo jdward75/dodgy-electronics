@@ -9,8 +9,13 @@ const CartItem = (props) => {
         <div className={styles["description-id"]}>{props.item.id}</div>
       </div>
       <div className={styles.details}>
-        <Input />
-        <div className={styles["details-value"]}>{props.item.total_value}</div>
+        <Input styles={{ width: "50px" }} />
+        <div className={styles["details-value"]}>
+          {props.item.total_value.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
+        </div>
       </div>
     </div>
   );

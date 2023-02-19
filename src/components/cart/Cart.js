@@ -21,7 +21,10 @@ const Cart = (props) => {
         <div className={styles.footer}>
           <div className={styles["footer-header"]}>Cart total amount:</div>
           <div className={styles["footer-amount"]}>
-            {props.cartCtx.cart.total_value}
+            {props.cartCtx.cart.total_value.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
           </div>
         </div>
       </div>
