@@ -13,6 +13,7 @@ const Cart = (props) => {
           return (
             <CartItem
               key={key}
+              id={key}
               item={value}
               updateCart={props.cartCtx.updateCart}
             />

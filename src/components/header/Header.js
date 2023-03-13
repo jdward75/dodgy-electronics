@@ -2,9 +2,11 @@ import styles from "./Header.module.css";
 import { CartContext } from "../../store/CartContext";
 import { useContext, useState } from "react";
 import reactDom from "react-dom";
+import Login from "../UI/Login";
 import Cart from "../cart/Cart";
 
 const Header = () => {
+  const [showLogin, setShowLogin] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const cartCtx = useContext(CartContext);
 
@@ -30,6 +32,11 @@ const Header = () => {
           })}
         </button>
       </div>
+      {showLogin &&
+        reactDom.createPortal(
+          <Login />,
+          document.getElementById("root-overlay")
+        )}
       {showCart &&
         reactDom.createPortal(
           <Cart hideCart={hideCartHandler} cartCtx={cartCtx} />,
