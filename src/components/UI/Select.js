@@ -4,13 +4,13 @@ import styles from "./Select.module.css";
 const Select = forwardRef((props, ref) => {
   return (
     <div className={styles.select}>
-      <label htmlFor={props.id}>{props.label}</label>
+      <label style={props.labelStyle} htmlFor={props.id}>{props.label}</label>
       <select
         ref={ref}
         name={props.name}
         id={props.id}
         onChange={props.onChange}
-        style={props.styles}
+        style={props.inputStyle}
       >
         {props.options.map((option) => {
           return (

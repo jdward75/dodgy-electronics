@@ -59,21 +59,23 @@ const ProductsFilter = (props) => {
     <div className={styles["product-filters"]}>
       <Select
         id="category"
-        label="Category"
+        label="Category:"
         name="category"
         options={categoryOptions}
         ref={categoryRef}
         onChange={applyFilterProductList}
-        styles={{ width: "125px" }}
+        labelStyle={{ width: "75px" }}
+        inputStyle={{ width: "100px" }}
       />
       <Select
         id="brand"
-        label="Brand"
+        label="Brand:"
         name="brand"
         options={brandOptions}
         ref={brandRef}
         onChange={applyFilterProductList}
-        styles={{ width: "125px" }}
+        labelStyle={{ width: "75px" }}
+        inputStyle={{ width: "100px" }}
       />
       <Input
         id="min-price"
@@ -82,7 +84,8 @@ const ProductsFilter = (props) => {
         type="number"
         ref={minPriceRef}
         onChange={applyFilterProductList}
-        styles={{ width: "100px" }}
+        labelStyle={{ width: "75px" }}
+        inputStyle={{ width: "100px" }}
       />
       <Input
         id="max-price"
@@ -92,7 +95,8 @@ const ProductsFilter = (props) => {
         width="100px"
         ref={maxPriceRef}
         onChange={applyFilterProductList}
-        styles={{ width: "100px" }}
+        labelStyle={{ width: "75px" }}
+        inputStyle={{ width: "100px" }}
       />
     </div>
   );

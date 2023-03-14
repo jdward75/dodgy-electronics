@@ -23,12 +23,12 @@ const CartItem = (props) => {
     <div className={styles.container}>
       <div className={styles.description}>
         <div className={styles["description-title"]}>{props.item.title}</div>
-        <div className={styles["description-id"]}>{props.item.id}</div>
+        <div className={styles["description-id"]}>{`(${props.id})`}</div>
       </div>
       <div className={styles.details}>
         <Input
           ref={quantityRef}
-          styles={{ width: "50px" }}
+          inputStyle={{ width: "50px" }}
           type="number"
           onChange={updateCartHandler}
           defaultValue={props.item.quantity}

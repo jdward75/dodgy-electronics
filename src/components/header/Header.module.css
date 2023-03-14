@@ -3,7 +3,8 @@
   padding: 15px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  border-radius: 5px;
 }
 
 .account {
@@ -11,10 +12,6 @@
   gap: 20px;
   align-items: center;
   font-size: larger;
-}
-
-.account span {
-  font-size: lager;
   font-weight: bold;
 }
 

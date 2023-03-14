@@ -1,14 +1,13 @@
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 15px;  
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
+  display: flex;  
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .description-title {
@@ -25,4 +24,10 @@
   gap: 15px;
   font-size: medium;
   font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
 }

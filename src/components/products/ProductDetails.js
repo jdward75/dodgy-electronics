@@ -48,7 +48,7 @@ const ProductDetails = (props) => {
           </h3>
           <div className={styles["update-cart"]}>
             <Input
-              styles={{ width: "50px" }}
+              inputStyle={{ width: "50px" }}
               type="number"
               id="qty"
               name="qty"
