@@ -52,6 +52,7 @@ const Header = () => {
             currency: "USD",
           })}
         </button>
+        <button>Edit List</button>
       </div>
       {showLogin &&
         reactDom.createPortal(
